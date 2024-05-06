@@ -174,14 +174,13 @@ class KANLinear(torch.nn.Module):
 class Model(nn.Module):
     def __init__(self):
         super(Model, self).__init__()
-        self.fundus_branch = resnet18(pretrained=True)
-        self.fundus_branch.fc = nn.Identity()  # remove the last fully connected layer
+        self.backbone = resnet18(pretrained=True)
+        self.backbone.fc = nn.Identity()  # remove the last fully connected layer
         self.decision_branch = KANLinear(512, 10)
         #self.decision_branch = nn.Linear(512, 10)
-        # modify the first convolutional layer channels in oct_branch
 
     def forward(self, img):
-        b1 = self.fundus_branch(img)
+        b1 = self.backbone(img)
         b1 = b1.view(b1.size(0), -1)
         logit = self.decision_branch(b1)
 
