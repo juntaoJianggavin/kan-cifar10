@@ -4,6 +4,7 @@ A simple code to replace linear layers with KAN in CNN models. Experimental resu
 The implentation of KAN are from: https://github.com/Blealtan/efficient-kan
 
 | Model | Accuracy | 
+| --- | --- | 
 | VGG16+MLP(from scratch) | 0.8144 |  
 | VGG16+KAN(from scratch)  |0.8177 |  
 | VGG16+MLP(Pretrained)| 0.8897 |  
