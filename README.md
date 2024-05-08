@@ -1,5 +1,5 @@
 # Replace MLP with Kolmogorov-Arnold Network in CNN models and conduct experiments on CIFAR 10
-A simple code to replace linear layers with KAN as the output layer in CNN models. Experimental results on CIFAR10 show that the performance of CNNs with MLP as the output layer and the performance of CNNs with KAN as the output layer are similar.
+A simple code to replace linear layers with KAN as the output layer in CNN models. Experimental results on CIFAR10 show that, the performances of CNNs with MLP as the output layer and CNNs with KAN as the output layer are similar.
 
 The implentation of KAN are from: https://github.com/Blealtan/efficient-kan
 
